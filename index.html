@@ -2,51 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>注册页面</title>
+    <title>Title</title>
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
 </head>
 <body id="bb">
-<h1 style="text-align: center " id="cc">注册界面</h1>
+<h1 style="text-align: center " id="cc">注&nbsp;&nbsp;册&nbsp;&nbsp;界&nbsp;&nbsp;面</h1>
 <div id="aa">
     <table>
-        <form>
-            <tbody>
+        <form name="myform">
+
+            <tbody >
             <tr>
                 <td>用户名：</td>
-                <td><input type="text" name="username" onblur="valiName(this)" value="user"></td>
+                <td><input type="text"  name="username"  value="" style="width: 220px" onblur="checkUserName(this)" placeholder="用户名4-16个字符"></td>
                 <td style="color:deeppink" >
                     <span id="msg1" style="color: red"></span>
-                    *请输入你的用户名，必须输入，由字母数字下划线组成 6－15位
+                    <b>*请输入你的用户名，4-16个字符</b>
                 </td>
             </tr>
 
             <tr>
-                <td>密码：</td>
-                <td><input type="password" name="pwd" onblur="CheckPassWord(this) " ></td>
-                <span id="msg2" style="color: red"></span>
-                <td style="color: deeppink">*密码必须是数字和字母组成</td>
+                <td>密&nbsp;&nbsp;&nbsp;码：</td>
+                <td><input type="password" name="pwd" onblur="checkpwd(this)" style="width: 220px" placeholder="密码必须是数字和字母组成"></td>
+                <td style="color: deeppink">
+                <span id="pwd" style="color: red"> </span>
+                <b>*密码必须是数字和字母组成，4-16个字符</b>
+                </td>
             </tr>
             <tr>
-                <td>姓名：</td>
-                <td><input type="text" name="xingming"></td>
+                <td>姓&nbsp;&nbsp;&nbsp;名：</td>
+                <td><input type="text" name="xingming" style="width: 220px"></td>
             </tr>
             <tr>
-                <td>性别：</td>
+                <td>性&nbsp;&nbsp;&nbsp;别：</td>
                 <td>
                     <input type="radio" checked name="sex"/>男
                     <input type="radio" name="sex"/>女
                 </td>
             </tr>
             <tr>
-                <td>兴趣：</td>
+                <td>兴&nbsp;&nbsp;&nbsp;趣：</td>
                 <td>
                     <input type="checkbox" name="xingqu"/>文学
                     <input type="checkbox" name="xingqu"/>电影
                     <input type="checkbox" name="xingqu"/>篮球
                     <input type="checkbox" name="xingqu"/>足球
                 </td>
-                <td style="color:deeppink">*兴趣，可多选</td>
+                <td style="color:deeppink"><b>*兴趣，可多选</b></td>
             </tr>
             <tr>
                 <td>个人简介：</td>
@@ -55,7 +60,7 @@
                 </td>
             </tr>
             <tr>
-                <td>地区：</td>
+                <td>地&nbsp;&nbsp;&nbsp;区：</td>
                 <td colspan="2">
                     <select name="area" >
                         <option value="金水区">金水区</option>
@@ -67,42 +72,79 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: center">
-                    <input type="submit" value="注册" />
+                <td colspan="2"   style="text-align: center">
+                    <input type="submit" value="注册" style="padding: 2px 20px 4px 20px"/>
 
-                <td >  <input type="reset" value="重置" /> </td>
+                <td >  <input type="reset" value="重置" style="padding: 2px 20px 4px 20px"/> </td>
 
                 </td>
 
             </tr>
             </tbody>
             <script type="text/javascript">
+                function checkUserName(){    //验证用户名
+                    var fname = document.myform.username.value;
 
-                //如何去获取要验证的元素
-                //验证元素属性获取与判断
-                //DOM操作
-                function valiName(obj) {
-                    //用户名不能为空
-                    //用户名不能少于3个字符
-                    var txt=obj.value;
                     var msg=document.getElementById("msg1");
-                    console.log(msg)
-                    if(txt.length==0){
-                        //alert("用户名不能为空");
+                    if(fname==""){
+                       // alert("请输入用户名");
                         msg.innerText="用户名不能为空";
+
                     }
-                    else if(txt.length>0&&txt.length<4)
-                    {
-                        msg.innerText="用户名不能少于三个字符"
+                    else if(fname.length < 6||fname.length>12){
+                        msg.innerText="用户名必须在 6-12 个字符";
+                      //  alert("用户名必须在 6-12 个字符。\n");
                     }
-                    else {
-                        // alert("用户名不能少于3个字符");
+                    else{
                         msg.innerText="";
                     }
-
                 }
+                function checkpwd() {
 
+                    var fname = document.myform.pwd.value;
+                    var reg=/^[0-9a-zA-Z]/;
+                    var msg=document.getElementById("pwd");
+                    if(fname.length != 0){
+                        for(i=0;i<fname.length;i++){
+                            if(!reg.test(fname)){
+                                msg.innerText="只能输入字母或数字";
+                              //  alert("只能输入字母或数字");
+                                return false;
+                            }
+                        }
+                        if(fname.length<4||fname.length>16){
+                            msg.innerText="只能输入4-16个字符";
+                            //alert("只能输入4-16个字符")
+                            return false;
+                        }
+                        else{
+                            msg.innerText="";
+                        }
+                    }
+                    else{
+                        alert("请输入密码");
+                        //document.myform.pwd.focus();
+                        return false
+                    }
+                    return true;
+                }
+                //显示隐藏对应的switchPwd()方法:
+                $(function(){
+                    // 通过jqurey修改
+                    $("#passwordeye").click(function(){
+                        let type =  $("#password").attr('type')
+                        if(type === "pwd"){
+                            $("#password").attr("type","text");
+                        }else{
+                            $("#password").attr("type","pwd");
+                        }
+                    });
+
+                });
             </script>
+
+
+
         </form>
     </table>
 </div>
@@ -118,7 +160,7 @@
             //求出div标签下的Img个数，每点击一次img的个数就会增加一个0++
             var index = $('.demo').children('img').length;
             $('.demo').append('<img src="">');
-            $('img:eq('+index+')').attr('src','./img/'+num+'.svg');
+            $('img:eq('+index+')').attr('src','./images/'+num+'.svg');
             $('img:eq('+index+')').css({'top':y,'left':x});
             $('img').animate({
                 'top':e.pageY-200,
@@ -131,7 +173,7 @@
 </script>
 
 <audio autoplay="autoplay" loop="loop" preload="auto"
-       src="music/saveme.mp3">
+       src="music/shaonian.mp3">
 </audio>
 
 
