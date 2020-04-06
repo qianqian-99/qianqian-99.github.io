@@ -1,0 +1,34 @@
+#help{
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+    font-size: 20px;
+
+}
+#help1{
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+    font-size: 20px;
+
+}
+#aa{
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+    width: 1000px;
+    height: 600px;
+    /*background-color: #3399FF;*/
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    margin: 10px;
+    line-height: 2.5;
+}
+#bb{
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+#cc{
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+}
+img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
