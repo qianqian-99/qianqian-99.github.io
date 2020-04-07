@@ -23,6 +23,8 @@
     background-image: url("../img/bg.gif");
     background-repeat: no-repeat;
     background-position: center top;
+     background-size:100% 100% ;
+    background-attachment: fixed
 }
 #cc{
     font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
