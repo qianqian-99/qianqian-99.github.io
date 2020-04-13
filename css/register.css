@@ -21,15 +21,17 @@
     padding-left: 20px;
 }
 .field{
+   .field{
     border: 0 none;
     font-size: 14px;
     width: 200px;
-    height: 19px;
-    margin: 10px;
+    height: 16px;
+    margin: 2px;
     /*background: #c81623;*/
     padding-bottom: 18px;
     padding-left: 20px;
     padding-top: 15px;
+}
 }
 .input-tip{
     color: #c5c5c5;
