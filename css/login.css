@@ -1,0 +1,140 @@
+.form-item-account {
+	z-index: 13;
+}
+.form-item {
+	position: relative;
+	border: solid 1px #ddd;
+	/*border-top-color: rgb(221, 221, 221);*/
+	/*border-right-color: rgb(221, 221, 221);*/
+	/*border-bottom-color: rgb(221, 221, 221);*/
+	/*border-left-color: rgb(221, 221, 221);*/
+	width: 398px;
+	height: 52px;
+	z-index: 0;
+}
+.lable{
+	float: left;
+	width: 87px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+}
+.field{
+	border: 0 none;
+	font-size: 14px;
+	width: 190px;
+	height: 19px;
+	padding-bottom: 11px;
+	padding-left: 20px;
+	padding-top: 16px;
+}
+.input-tip{
+	color: #c5c5c5;
+	height: 27px;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.btn-register{
+	background: #c81623;
+	width: 40%;
+	height: 54px;
+	line-height: 54px;
+	text-align: center;
+	color: #fff;
+	background: #e2231a;
+	border: 0;
+	font-size: 16px;
+	font-family: "Microsoft YaHei","Hiragino Sans GB";
+	cursor: pointer
+}
+#aa{
+	font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+	width: 1000px;
+	height: 600px;
+	/*background-color: #3399FF;*/
+	position: absolute;
+	left: 550px;
+	top: 200px;
+	margin: 10px;
+	line-height: 2.5;
+}
+.header {
+	height: 110px;
+	background: url(//misc.360buyimg.com/user/reg-com/css/i/headbg.jpg) repeat-x left bottom;
+}
+.logo {
+	background-image: url("../images/te.png");
+	background-repeat: no-repeat;
+	background-size:100% 100% ;
+
+	width: 160px;
+	height: 70px;
+	float: left;
+	margin-top: 24px;
+}
+.logo-title {
+	position: absolute;
+	top: 35px;
+	left: 430px;
+
+	font-size: 16px;
+	color: #999;
+	margin-top: 34px;
+}
+.have-account {
+	font-size: 16px;
+	float: right;
+	margin-top: 60px;
+	color: #999;
+}
+.w {
+	width: 990px;
+	margin: 0 auto;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+#form-footer{
+	position: absolute;
+	top: 600px;
+	left: 240px;
+}
+.links {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	color: #999;
+}
+.root61 .w {
+	width: 1210px;
+}
+.footer {
+	font-size: 12px;
+	text-align: center;
+	border-top: solid 1px #e6e6e6;
+	color: #999;
+	padding-bottom: 25px;
+}
+.footer {
+	text-align: center;
+	border-top: 1px solid #e6e6e6;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+.footer a {
+	color: #999;
+	margin: 0 10px;
+}
+.footer a {
+	cursor: pointer;
+	color: #b4b4b4;
+	height: 16px;
+	padding-right: 5px;
+}
+img{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
