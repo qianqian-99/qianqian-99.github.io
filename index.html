@@ -76,7 +76,7 @@
             //求出div标签下的Img个数，每点击一次img的个数就会增加一个0++
             var index = $('.demo').children('img').length;
             $('.demo').append('<img src="">');
-            $('img:eq(' + index + ')').attr('src', './images/' + num + '.svg');
+            $('img:eq(' + index + ')').attr('src', './img/' + num + '.svg');
             $('img:eq(' + index + ')').css({'top': y, 'left': x});
             $('img').animate({
                 'top': e.pageY - 200,
