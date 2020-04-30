@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公共JSP界面</title>
+
+    <style>
+        .header1 {
+            height: 90px;
+            background: url(//misc.360buyimg.com/user/reg-com/css/i/headbg.jpg) repeat-x left bottom;
+        }
+        .headerLogo {
+            position: absolute;
+            top: 23px;
+            left: 95px;
+            color: pink;
+        }
+        .headerTitle {
+            font-size: 16px;
+            height: 30px;
+            line-height: 30px;
+            width: 156px;
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 204px;
+            border-left: 1px solid #ccc;
+            color: #888;
+        }
+        .headerNav {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            text-align: right;
+            line-height: 17px;
+            color: #888;
+        }
+        a.separation-line:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -2px;
+            margin-left: 12px;
+            width: 1px;
+            height: 12px;
+            background-color: #c2c2c2;
+            font-size: 0;
+        }
+
+        .headerNav a {
+            padding-left: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .headerNav, .headerNav a {
+            color: rgb(102, 102, 102);
+            font-size: 13px;
+        }
+
+        a {
+            color: rgb(132, 133, 133);
+            text-decoration: none;
+        }
+        .headerNav {
+            top: 45px;
+            right: 30px;
+            text-align: right;
+            line-height: 17px;
+        }
+
+        .bb{
+            float: left;
+            width: 100%;
+            height: 600px;
+            background: #15bcaa;
+
+            /*background-image: url("../images/a.jpg");*/
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size:100% 100% ;
+            background-attachment: fixed
+        }
+
+        .loginForm {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+            background: white;
+            width: 400px;
+            height: 500px;
+        }
+
+        .form-item {
+            position: relative;
+            margin: 10px;
+
+            border: solid 1px #ddd;
+            text-align: center;
+            width: 370px;
+            height: 52px;
+            z-index: 0;
+        }
+        .form-item1{
+            position: relative;
+            margin: 10px;
+
+            border: solid 1px #15bcaa;
+            text-align: center;
+            width: 370px;
+            height: 52px;
+            z-index: 0;
+        }
+        .form-item-account {
+            z-index: 13;
+        }
+        .lable{
+            float: left;
+            width: 87px;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+        .field{
+            border: 0 none;
+            font-size: 14px;
+            width: 190px;
+            height: 19px;
+            padding-bottom: 11px;
+            padding-left: 20px;
+            padding-top: 16px;
+        }
+        .input-tip{
+            color: #c5c5c5;
+            height: 10px;
+            font-size: 12px;
+            padding-top: 5px;
+        }
+        .cc{
+            position: absolute;
+            left: 260px;
+            top: 300px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            color:darkgray;
+        }
+        .dd{
+            position: absolute;
+            left: 50px;
+            top: 300px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            color: darkgray;
+        }
+        .dd1{
+            position: absolute;
+            left: 50px;
+            top: 300px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            color: #15bcaa;
+        }
+        .cc1{
+            position: absolute;
+            left: 260px;
+            top: 300px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            color: #15bcaa;
+        }
+
+        .btn-register{
+            position: absolute;
+            left: 80px;
+            top: 360px;
+            width: 60%;
+            height: 54px;
+            line-height: 54px;
+            color: #fff;
+            /*background: #15bcaa;*/
+            background: #71bca9;
+            border: 0;
+            font-size: 16px;
+            font-family: "Microsoft YaHei","Hiragino Sans GB";
+            cursor: pointer
+        }
+        .btn-register1{
+            position: absolute;
+            left: 80px;
+            top: 360px;
+            width: 60%;
+            height: 54px;
+            line-height: 54px;
+            color: #fff;
+            background: #15bcaa;
+            border: 0;
+            font-size: 16px;
+            font-family: "Microsoft YaHei","Hiragino Sans GB";
+            cursor: pointer
+        }
+        .ee{
+            position: absolute;
+            left: 160px;
+            top: 440px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            color: #15bcaa;
+        }
+        .e{
+            color: #71bca9;
+        }
+        .e1{
+            color:#65bc5c;
+        }
+        .copyright{
+            position: absolute;
+            left: 600px;
+            top: 720px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+        }
+
+        .ee{
+            position: absolute;
+            top: 60px;
+            left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header1">
+    <div class="headerLogo" > <p>钱钱版权所有</p></div>
+    <p class="headerTitle" style="text-indent:1em" > 第一品牌</p>
+    <div class="headerNav">
+        <a data-tj-name="b_nav_mailplus_click" href="https://v.mail.163.com/?utm_source=163loginnav" target="_blank">会员PLUS</a>
+        <a data-tj-name="b_nav_hwmail_click" href="https://hw.mail.163.com/#163" target="_blank">海外用户登录</a>
+        <a data-tj-name="b_nav_mailmaster_pc_click" href="https://mail.163.com/dashi/dlpro.html?from=mail11" target="_blank" class="separation-line">钱钱大师</a>
+        <a data-tj-name="b_nav_help_click" href="https://help.mail.163.com" target="_blank">帮助</a>
+        <a data-tj-name="b_nav_feedback_click" href="https://help.mail.163.com/newfeedback.do?m=add" target="_blank">登录反馈</a>
+    </div>
+</div>
+<div class="bb" >
+    <div  class="loginForm">
+        <h3 style="text-align: center">后台用户管理操作</h3>
+        <a href="target.html" target="iframe1">click</a>
+        <iframe name="iframe1" class="ee" width="300" height="200" scrolling="no" frameborder="0"  allowtransparency></iframe>
+
+    </div>
+
+
+
+
+    <div class="copyright">Copyright©2020-2222&nbsp;&nbsp;qianqian&nbsp;版权所有</div>
+</div>
+
+
+
+</body>
+</html>
